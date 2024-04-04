@@ -12,6 +12,7 @@
     }
 :root{
     --primary-color:#fb995d;
+    --primary-color-bright:#fa7727;
 }
     
 
@@ -50,7 +51,9 @@ h6{
 .text-primary{
     color:var(--primary-color);
 }
-
+.span{
+    font-family: chivo mono;
+}
 
 
 

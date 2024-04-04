@@ -13,6 +13,9 @@
     font-family: chivo mono;
     font-weight: 700;
 }
+.logo span{
+    font-family: chivo mono;
+}
 
 .nav-links{
     color:#fff;
