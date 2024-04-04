@@ -1,9 +1,11 @@
 import React from "react";
+import Showcase from "../../components/layout/showcase/Showcase";
+
 const HomePage=()=>{
     return(
         <div>
         <section>
-            <h1>hello</h1>
+            <Showcase></Showcase>
         </section>
         </div>
     )
