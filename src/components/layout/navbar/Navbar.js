@@ -1,8 +1,10 @@
 import React from "react";
 import './navbar.styles.css'
-const Navbar=()=>{
+const Navbar=({darkTheme})=>{
+
+    
     return(
-        <section className="navbar-container"> 
+        <section className={`navbar-container ${darkTheme ? 'background-dark' :'background-transparent'}`}> 
     <div className="container flex justify-between align-center">
         <a href="#" className="logo">Book<span className="text-primary">worm</span></a>
         <nav  className="nav-links-container">
