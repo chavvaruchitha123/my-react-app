@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../../components/layout/navbar/Navbar";
 const BooksPage=()=>{
     return(
         <section>
-            <h1>Books Page</h1>
+     
+    <Navbar></Navbar>
         </section>
     )
 
