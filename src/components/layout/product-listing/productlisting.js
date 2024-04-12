@@ -1,6 +1,7 @@
 import React from "react";
 import './productlisting.styles.css';
 import ProductListingCard from "../../cards/productlistingcard/productlistingcard";
+import { BookData } from "../../../pages/utils/BookData";
 
 const ProductListing =()=>{
 return(
@@ -10,13 +11,10 @@ return(
 
     <h2>Here are the some <span className="text-primary">books</span> that you might like</h2>
     <div className="listing-container">
-        
+        {BookData.slice(0,4).map((book)=>(
+            <ProductListingCard  key={book.id} bookData={book}></ProductListingCard>
+        ))}
 
-<ProductListingCard></ProductListingCard>
-<ProductListingCard></ProductListingCard>
-<ProductListingCard></ProductListingCard>
-<ProductListingCard></ProductListingCard>
-        
 
 
 

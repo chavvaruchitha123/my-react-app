@@ -56,6 +56,23 @@ h6{
     font-family: chivo mono;
 }
 
+.button-primary{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color-bright);
+    color:#fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2rem ease-in;
+    font-family:Arial, Helvetica, sans-serif;
+   border: none;
+   font-size: 1rem;
+}
+.button-primary:hover{
+    background-color: #222;
+}
+
 
 
 
