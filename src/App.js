@@ -2,6 +2,7 @@ import React ,{useState,useEffect,createContext} from "react";
 import { Routes,Route } from "react-router-dom";
 import app from "./firebase/firebase";
 import{getAuth,onAuthStateChanged} from 'firebase/auth';
+import SearchPage from "./pages/searchpage/SearchPage";
 
 import HomePage from "./pages/homepage/HomePage";
 import BooksPage from "./pages/bookspage/BookPage";
@@ -13,10 +14,12 @@ import Signup from "./pages/signuppage/signup";
  export const UserContext=createContext({})
  export const CartContext=createContext({})
 
+
 const App=()=>{
     const auth=getAuth(app);
     const [authenticateduser,setAuthenticated]=useState(null)
     const[cartItems,setcartItems]=useState([]);
+    const[totalAmount,setTotalAmount]=useState(0)
     
 
     useEffect(()=>{
@@ -30,17 +33,22 @@ const App=()=>{
         
         })     
     },[])
-    // useEffect(()=>{
-    //       console.log(cartItems)
-    // },[cartItems])
+    useEffect(()=>{
+          let total=0;
+          cartItems.forEach((item)=>{
+            total=total+parseInt(item.price)
+          })
+          setTotalAmount(total)
+    },[cartItems])
     return(
         <UserContext.Provider value={authenticateduser}>
-          <CartContext.Provider value={{cartItems,setcartItems}}>
+          <CartContext.Provider value={{cartItems,totalAmount,setcartItems}}>
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/books" element={<BooksPage/>}/>
             <Route path="/cart" element={<CartPage/>}/>
-
+            <Route path="/search" element={<SearchPage/>}/>
+         
             <Route path="/book-details/:id" element={<BookDetails/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/Login" element={<Login/>}/>
