@@ -4,7 +4,7 @@
  
 
 
-    * {
+    /* * {
         margin:0 ;
         padding:0;
         box-sizing: border-box;
@@ -72,9 +72,111 @@ h6{
 .button-primary:hover{
     background-color: #222;
 }
+ */
 
 
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Hanken Grotesk;
+}
 
+:root {
+    --primary-color: #fb995d;
+    --primary-color-bright: #fa7727;
+    --white-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Chivo Mono;
+}
+
+h1 {
+    font-size: 2.0rem;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.span {
+    font-family: Chivo Mono;
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color-bright);
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    font-size: 1rem;
+}
+
+.button-primary:hover {
+    background-color: #222;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .button-primary {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .button-primary {
+        font-size: 0.8rem;
+    }
+}
 
 
 

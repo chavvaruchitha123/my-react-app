@@ -31,7 +31,7 @@ const DetailSection=()=>{
         alert(`The book ${bookData.book_name} is added to the cart `)
     }
     else{
-           navigate("/signup")
+           navigate("/Login")
            alert("please login or signup")
     }
     }
@@ -49,7 +49,7 @@ const DetailSection=()=>{
                                 <p> <b>Language :</b> {bookData.language}</p>
                                 <p><b>Book Length :</b>{bookData.print_length}</p>
                                 <h3> &#8377; {bookData.price}</h3>
-                                <a onClick={handleAddToCart} className="button-primary">Add to cart</a>
+                                <a onClick={handleAddToCart} className="button-primary">Add To Cart</a>
                     </div>
 
                 </div>

@@ -4,7 +4,9 @@ import { BookData } from "../utils/BookData";
 import Navbar from "../../components/layout/navbar/Navbar";
 import SearchResultCard from "../../components/cards/search-result-card/SearchResultCard";
 import './searchpage.styles.css';
+import Footer from "../../components/layout/footer/footer";
 const SearchPage=()=>{
+    // <Footer></Footer>
     const  location=useLocation();
     const[SearchResult,SetSearchResult]=useState([])
        useEffect(()=>{
@@ -20,11 +22,17 @@ const SearchPage=()=>{
                     <div className="container">
                     <h2>Your Search Result</h2>
                     {SearchResult.map((result)=>
+                    <>
                         <SearchResultCard key={result.id}bookData={result}/>
+                        {/* <Footer></Footer> */}
+                        </>
                     )}
+                    {/* <Footer></Footer> */}
                     </div>
                 </div>
+                <Footer></Footer>
         </section>
     )
 }
+{/* <Footer></Footer> */}
 export default SearchPage
