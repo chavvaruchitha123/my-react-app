@@ -19,6 +19,7 @@ const App=()=>{
     const auth=getAuth(app);
     const [authenticateduser,setAuthenticated]=useState(null)
     const[cartItems,setcartItems]=useState([]);
+    
     const[totalAmount,setTotalAmount]=useState(0)
     
 
